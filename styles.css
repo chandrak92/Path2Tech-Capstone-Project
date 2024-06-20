@@ -1,0 +1,117 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    padding: 10px;
+}
+
+nav {
+    background-color: #F79872;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    display: block;
+    color: wheat;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color: #ea703f;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.dropdown-options a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #3f97ea;
+    text-align: left;
+}
+
+.dropdown-options a:hover {
+    background-color: #ea703f;
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}
+
+.main-view {
+    text-align: center;
+    position: relative;
+}
+
+.main-view img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-view::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+.text-overlay h1, p, button {
+    margin: 0;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+.text-overlay h1 {
+    font-size: 80px;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+.text-overlay p {
+    font-size: 50px;
+}
+
+.text-overlay button {
+    padding: 20px;
+    background-color: #69B578;
+    border-radius: 15%;
+    margin: 20px;
+    width: 150px;
+    text-align: center;
+}
