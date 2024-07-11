@@ -1,0 +1,192 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* no visible changes*/
+}
+
+header {
+  width: 100%;
+  padding: 0px;
+}
+
+nav {
+  /* removed width: 100% to fix margin-left login button from cutting off */
+  background-color: #F79872;
+  padding: 15px;
+  overflow: visible; /* ensure drop down menu overflow is visible */
+}
+
+.nav-list {
+  list-style-type: none; /* removes list bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position:relative;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: block;
+  color: wheat;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: backgroud-color 0.3s; /* add smoother hover effect */
+}
+
+.nav-item a:hover {
+  background-color: #ea703f;
+  transition: background-color .3s; /* add transition for smoother hover effect */
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  color: wheat;
+  background-color: #ea703f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  z-index: 1000;
+  flex-direction: column;
+  top: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  list-style-type: none;  /* removes list bullet points */
+  padding: 10px;
+}
+
+.dropdown-options a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: wheat;
+  text-align: left;
+  transition: background-color .3s; /* add transition for smoother hover effect */
+}
+
+.dropdown-options a:hover {
+  background-color: #934527;
+  border-radius: 10px; /* not sure if this is necessary */
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.main-view {
+  /* text-align: center; */
+  position: relative;
+  /* height: 60vh; removed to keep from img cut out by "content section" */
+  overflow: hidden;
+}
+
+.main-view img {
+  width: 100%;
+  height: 100%; /* make image stretch */
+  object-fit: cover; /* prevents image stretching while ensuring image covers container*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2; /* ensures image is behind text and whitewash */
+}
+
+.main-view::before {  /* white cast over image */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1; /* ensure white cast is at the front relative to img */
+  pointer-events: none; /* might eliminate this line; not sure I need it */
+}
+
+.text-overlay {
+  /* position: absolute; */
+  /* top: 10%;
+  left: 5;
+  transform: translateX(-50%); */
+  color: #333;
+  z-index: 1; /* ensure text is aboove image & whitewash*/
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-overlay h1, p, button {
+  margin: 0;
+  /* text-align: left; */
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-overlay h1 {
+  font-size: 8vw;  /* responsive font size */
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.text-overlay p {
+  font-size: 3vw; /* responsive font size */
+}
+
+.text-overlay button {
+  padding: 20px;
+  background-color: #69B578;
+  border-radius: 10px;
+  margin: 20px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 6px #325539;
+  border: none;  /* eliminated border*/
+  cursor: pointer; /* changed cursor to pointer on hover*/
+}
+
+.text-overlay button:hover {
+  background-color: #608f6a; /* slightly darker shade for hover effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for login button */
+.login-button {
+  background-color: #69B578;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px #325539;
+}
+
+.login-item {
+  margin-left: auto;
+}
+
+.login-button:hover {
+  background-color: #325539;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 8vw;
+  }
+  
+  .text-overlay p {
+    font-size: 4vw;
+  }
+
+  .text-overlay button {
+    width: 120px;
+    padding: 15px;
+  }
+}
