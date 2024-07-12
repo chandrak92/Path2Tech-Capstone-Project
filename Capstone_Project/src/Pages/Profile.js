@@ -1,6 +1,8 @@
 
 
-// const Profile = () => {
-//     return()
-// }
-// export default Profile
+const Profile = () => {
+    return(
+        <p>Profile</p>
+    )
+}
+export default Profile
