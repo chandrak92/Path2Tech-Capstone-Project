@@ -1,5 +1,6 @@
 import React from 'react';
 // import axios from 'axios';
+import '../Style/login.css';
 
 function Authlog(){
     return(
