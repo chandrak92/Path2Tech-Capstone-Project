@@ -1,6 +1,8 @@
 
 
-// const Contact = () => {
-//     return()
-// }
-// export default Contact
+const Contact = () => {
+    return(
+      <p>Contact</p>
+    )
+}
+export default Contact

@@ -1,6 +1,8 @@
 
 
-// const Resources = () => {
-//     return()
-// }
-// export default Resources
+const Resources = () => {
+    return(
+      <p>Resource</p>
+    )
+}
+export default Resources

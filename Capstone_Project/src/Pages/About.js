@@ -1,6 +1,8 @@
 
 
-// const About = () => {
-//     return()
-// }
-// export default About
+const About = () => {
+    return(
+      <p>About</p>
+    )
+}
+export default About

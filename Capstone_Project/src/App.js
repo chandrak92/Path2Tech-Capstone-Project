@@ -13,25 +13,21 @@ import Foot from './Components/Foot';
 
 function App() {
 return (
-  <section>
-    <header>
+  <section className='app'>
       <NavBar></NavBar>
-    </header>
-<main>
-  <Routes>
-      <Route path="/" element={<Home></Home>}></Route>
-      <Route path="/about" element={<About></About>}></Route>
-      <Route path="/profile" element={<Profile></Profile>}></Route>
-      <Route path="/quiz" element={<Quiz></Quiz>}></Route>
-      <Route path="/contact" element={<Contact></Contact>}></Route>
-      <Route path="/resources" element={<Resources></Resources>}></Route>
-      <Route path="*" element={<NotFound></NotFound>}></Route>
-      {/*  <Route path="/about/:id" element={<About></About>}></Route> is a way to include parameters in your */}
-    </Routes>
-</main>
-    <footer>
+      <main>
+        <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+            <Route path="/profile" element={<Profile></Profile>}></Route>
+            <Route path="/quiz" element={<Quiz></Quiz>}></Route>
+            <Route path="/contact" element={<Contact></Contact>}></Route>
+            <Route path="/resources" element={<Resources></Resources>}></Route>
+            <Route path="*" element={<NotFound></NotFound>}></Route>
+            {/*  <Route path="/about/:id" element={<About></About>}></Route> is a way to include parameters in your */}
+          </Routes>
+      </main>
       <Foot></Foot>
-    </footer>
   </section> 
 );
 }

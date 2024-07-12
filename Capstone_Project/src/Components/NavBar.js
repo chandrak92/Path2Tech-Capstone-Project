@@ -3,6 +3,7 @@ import moment from 'moment';
 import { NavLink } from 'react-router-dom';
 // import SearchBar from './SearchBar'
 import Authlog from './login';
+import '../Style/login.css';
 
 
 const NavBar = () => {
