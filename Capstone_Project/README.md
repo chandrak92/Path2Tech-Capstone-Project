@@ -10,7 +10,7 @@
 
 <div display="flex" align=center>
    <a href="https://www.linkedin.com/in/chandra-white/">
-<img alt="chandra white" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/157651970/0d346c9c-b53f-4e2c-b2ca-c3ce915511c4" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+<img alt="chandra white" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/chandraw" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
    </a></br>
   <p>My name is Chandra White. I enjoy all things tech and joined this course to help update my coding skills. This group challenged ourselves to create a website that could be both educational and a resource.</p>
   
