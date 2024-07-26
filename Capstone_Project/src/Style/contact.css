@@ -1,10 +1,27 @@
+.contact-container{
+    width: 40%;
+    margin: 5% auto;
+    border-radius: 20px;
+    padding: 15px;
+    border-color: olive;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-drop {
     background-color: #f79872;
-    width: 150px;
+    width: inherit;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 5px;
     display: flex;
+    flex-direction: column;
     position: relative;
+    align-items: center;
 }
 
 .founder-email {
@@ -24,6 +41,8 @@
 
 .dropdown-contact {
     position: absolute;
+    top: 100%;
+    left: 0;
     border-radius: 10px;
     color: wheat;
     background-color: #ea703f;
