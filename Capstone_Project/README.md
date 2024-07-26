@@ -22,8 +22,8 @@ I will provide links to sources and credit organizations and published literatur
 ### Resources for Change
 This is [Chilli](https://www.chilli.club/ "chilli") an iOS application you can use for daily action reminders.
 
-[!NOTE]
-Open the `Capstone_Project` Folder and take a look at the `README.md` file to contribute to the React Client Project.
+
+> Open the `Capstone_Project` Folder and take a look at the `README.md` file to contribute to the React Client Project.
 
 
 

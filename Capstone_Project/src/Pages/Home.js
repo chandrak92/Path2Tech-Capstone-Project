@@ -6,9 +6,9 @@ import image from "../Assets/noPlanetB.png"
 const Home = () => {
     return(
         <section>
-            <div class="main-view">
+            <div className="main-view">
                 <img src={image} alt="Cardboard sign reading 'There is no Planet B'"/>
-                <section class="text-overlay">
+                <section className="text-overlay">
                     <h1>We are committed to eliminating textile and food waste</h1>
                     <p>By making the recycling of clothes and food less daunting!</p>
                     <button value="learn-more">Learn More</button>
