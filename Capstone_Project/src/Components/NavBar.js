@@ -36,35 +36,37 @@ const NavBar = () => {
                 </section>
             </section>
             <section className="bottom">
-                <ul className="nav-list">
-                    <li className="nav-item"><NavLink to="/">Home</NavLink></li>
+                <section className="nav-list">
+                    <div className="nav-item"><NavLink to="/">Home</NavLink></div>
                     <div
+                    className="nav-item"
+                    id="about"
                     onMouseEnter={() => setAboutHovered(true)}
                     onMouseLeave={() => setAboutHovered(false)}
                     >
-                        <li className="nav-item" id="about"><NavLink
-                        to="/about"
-                        >About</NavLink></li>
-                            <ul className={`dropdown-options ${abouthovered ? 'active-navbar' : 'hidden-navbar'}`}>
-                                <li><NavLink to="/about/our-team">Our Team</NavLink></li>
-                                <li><NavLink to="/about/our-story">Our Story</NavLink></li>
-                            </ul>
+                    <div  ><NavLink to="/about">About</NavLink></div>
+                        <div className={`dropdown-options ${abouthovered ? 'active-navbar' : 'hidden-navbar'}`}>
+                            <NavLink to="/about/our-team">Our Team</NavLink>
+                            <NavLink to="/about/our-story">Our Story</NavLink>
+                        </div>
                     </div>
-                    <li className="nav-item"><NavLink to="/quiz">Quiz</NavLink></li>
                     <div
+                        className="nav-item"
+                        id="resource"
                         onMouseEnter={() => setResourceHovered(true)}
                         onMouseLeave={() => setResourceHovered(false)}
                         >
-                        <li className="nav-item" id="resource"><NavLink to="/resources">Resources</NavLink></li>
-                            <ul className={`dropdown-options ${resourcehovered ? 'active-navbar' : 'hidden-navbar'}`}>
-                                <li><NavLink to="/resources/organizations">Organizations</NavLink></li>
-                                <li><NavLink to="/resources/actions">Actions</NavLink></li>
-                            </ul>
+                        <NavLink to="/resources">Resources</NavLink>
+                            <div className={`dropdown-options ${resourcehovered ? 'active-navbar' : 'hidden-navbar'}`}>
+                                <NavLink to="/resources/organizations">Organizations</NavLink>
+                                <NavLink to="/resources/actions">Actions</NavLink>
+                            </div>
                     </div>
-                    <li className="nav-item"><NavLink to="/locator">Locator</NavLink></li>
-                    <li className="nav-item"><NavLink to="/contact">Contact Us</NavLink></li>
-                    <li className="nav-item"><NavLink to="/profile">Profile</NavLink></li>
-                </ul>
+                    <div className="nav-item"><NavLink to="/quiz">Quiz</NavLink></div>
+                    <div className="nav-item"><NavLink to="/locator">Locator</NavLink></div>
+                    <div className="nav-item"><NavLink to="/profile">Profile</NavLink></div>
+                    <div className="nav-item"><NavLink to="/contact">Contact Us</NavLink></div>
+                </section>
             </section>
         </nav>
     </header>
