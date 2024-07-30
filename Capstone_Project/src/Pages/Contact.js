@@ -10,7 +10,7 @@ const Contact = () => {
       const body = data.body;
       const subject = data.subject;
       // The myEmail variable should be replaced with your email address
-    //   const ChandraEmail= "replace with your email address";
+     //  const ChandraEmail= "cwhite1138@yahoo.com";
     //   const SimoneEmail= "replace with your email address";
     //   const YarminEmail= "replace with your email address";
       const ouremail= [];
