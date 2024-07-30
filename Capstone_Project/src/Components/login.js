@@ -1,12 +1,40 @@
-import React from 'react';
-// import axios from 'axios';
-import '../Style/login.css'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom'
+import '../Style/login.css';
 
 function Authlog(){
+  const navigate = useNavigate();
+  const [data, setData] = useState({
+    email: "",
+    password: ""
+  })
+
+  const loginUser = async (e) => {
+    e.preventDefault()
+    const {email, password} = data
+    try {
+      const {data} = await axios.post("/login",{
+        email,
+        password
+      });
+      if(data.error){
+        toast.error(data.error)
+      } else {
+        setData({});
+        navigate("/")
+      }
+    } catch(error) {
+      
+    }
+  }
+  // if else statement if someone is logged in to display or not display login card
+  // await axios statement ot determine that the user has logged in
     return(
         <div className="card">
           <h4>Member Login</h4>
-          <form action=" " method="post" name="theForm" id="theForm">
+          <form onSubmit={loginUser} method="post" name="theForm" id="theForm">
             <input name="client_id" type="hidden" value="web"></input>
             <input name="return" type="hidden" value=""></input>
               <table>
@@ -29,8 +57,8 @@ function Authlog(){
                   <tr className="buttons">
                     <td></td>
                     <td>
-                      <button type="submit" className="loginbtn" name="action" value="login">Login</button>
-                      <button type="submit" className="signupbtn" name="action" value="signup">Sign-Up</button>
+                      <button type="submit" className="loginbtn" value="login">Login</button>
+                      <button type="submit" className="signupbtn" value="signup">Sign-Up</button>
                     </td>
                   </tr>
                 </tbody>
