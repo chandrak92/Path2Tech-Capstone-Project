@@ -15,4 +15,5 @@ router.get("/", test)
 router.post("/register", registerUser)
 router.post("/login", loginUser)
 
+//default export, takes single
 module.exports = router

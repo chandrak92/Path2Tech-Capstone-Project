@@ -12,7 +12,7 @@ const Profile = () => {
     useEffect(() => { 
         const fetchData = async () => { 
             try {
-                const response = await axios.get('http://localhost:4000/users/66a53ad04e1f01eaeed55189');
+                const response = await axios.get('http://localhost:4000/users/66a97d2fcfbd7dacd3512480');
                 setFirstName(response.data.firstName);
             } catch (error) {
                 setError(error);

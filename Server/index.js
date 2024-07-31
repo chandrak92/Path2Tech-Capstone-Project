@@ -10,8 +10,8 @@
 const dotenv = require("dotenv").config()
 const express = require("express");
 const cors = require("cors");
-const { mongoose } = require("mongoose");
-const cookieParser = require("cookie-parser");
+const mongoose  = require("mongoose");
+// const cookieParser = require("cookie-parser");
 // const { User } = require("./Models/userSchema.js")
 
 const app = express();
@@ -20,14 +20,6 @@ const app = express();
 mongoose.connect(process.env.SPECIAL_KEY)
 .then(() => console.log("Database Connected"))
 .catch((error) => console.log("Database not connected", error))
-
-//middleware
-app.use(express.json());
-app.use(cookieParser);
-app.use(express.urlencoded({ extended: false}));
-
-app.use("/", require("./Routes/authRoutes"))
-
 // const db= async() => {
 //     try{
 //         await mongoose.connect(`${process.env.SPECIAL_KEY}`)
@@ -36,10 +28,26 @@ app.use("/", require("./Routes/authRoutes"))
 //     }
 // }
 
+//middleware
+app.use(express.json());
+// app.use(cookieParser);
+app.use(express.urlencoded({extended: false}));
+
+// finalize connection to DB, call back function
 // db()
+
+app.use("/", require("./Routes/authRoutes"))
+
+// app.get("/", (req,res) => {
+//     res.send("hello!")
+// })
+
 
 // app.use(cors());
 // app.use(express.urlencoded());
+
+
+//../authcontroller logic for endpoints established for register and login
 
 // app.post("/register", async (req, res) =>{
 //     try{
