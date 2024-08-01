@@ -1,4 +1,4 @@
-import { TextBubble } from "../Components/TextBubble";
+import TextBubble from "../Components/TextBubble.js";
 import "../Style/resource.css";
 
 const Resources = () => {

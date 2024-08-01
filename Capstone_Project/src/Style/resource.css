@@ -1,4 +1,4 @@
-.bold-text {
+/* .bold-text {
     font-weight: bold;
   }
 
@@ -19,29 +19,29 @@ h1 {
     font-size: 28px;;
 }
 
-  .text-bubble {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 20px;
-    background-color: #ffcf70;
-    color: #333;
-    border: 1px solid #ccc;
-    position: relative;
-    max-width: 300px;
-    word-wrap: break-word;
-  }
-  
-  .text-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -10px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: #f1f0f0;
-    border-bottom: 0;
-    border-left: 0;
-    margin-left: -5px;
-    margin-bottom: -10px;
-  }
+.text-bubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #ffcf70;
+  color: #333;
+  border: 1px solid #ccc;
+  position: relative;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.text-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #f1f0f0;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -5px;
+  margin-bottom: -10px;
+} */

@@ -61,8 +61,9 @@ const NavBar = () => {
                     onMouseEnter={() => setAboutHovered(true)}
                     onMouseLeave={() => setAboutHovered(false)}
                     >
-                    <div  ><NavLink to="/about">About</NavLink></div>
+                    <div className="nav-item"><NavLink to="/about">About</NavLink></div>
                         <div className={`dropdown-options ${abouthovered ? 'active-navbar' : 'hidden-navbar'}`}>
+                            {/* ensure to link to specific locationon page */}
                             <NavLink to="/about/our-team">Our Team</NavLink>
                             <NavLink to="/about/our-story">Our Story</NavLink>
                         </div>

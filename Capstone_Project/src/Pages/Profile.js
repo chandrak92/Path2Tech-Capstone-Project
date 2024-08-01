@@ -86,7 +86,7 @@ const Profile = () => {
               <li key={index} style={{ borderBottom: '1px solid #ccc', padding: '10px 0' }}>
                 {comment}
               </li>
-            ))};
+            ))}
           </ul>
         </div>
       </section>
