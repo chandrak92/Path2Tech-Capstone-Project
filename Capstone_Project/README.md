@@ -1,11 +1,16 @@
 # Thank you for visiting our Path2Tech Capstone Project!
 <div display="flex" align=left>
    <a href="https://www.linkedin.com/in/simone-moore-nyc/">
-<img alt="simone moore" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/157651970/0d346c9c-b53f-4e2c-b2ca-c3ce915511c4" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+   <img alt="simone moore" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/157651970/0d346c9c-b53f-4e2c-b2ca-c3ce915511c4" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
    </a></br>
   <p>My name is Simone Moore. I recently took the chance on a career change to put my passion into my work. This group challenged ourselves to create a website that could be both educational and a resource.</p>
-  
+</div>
 
+<div display="flex" align=center>
+   <a href="https://www.linkedin.com/in/chandra-white/">
+   <img alt="chandra white" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/Chandra.jpg" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+   </a></br>
+  <p>My name is Chandra White. I enjoy all things tech and joined this course to help update my coding skills. This group challenged ourselves to create a website that could be both educational and a resource.</p>
 </div>
 
 ## The Dire Issue of Climate is Here and We *Need* Your Help!

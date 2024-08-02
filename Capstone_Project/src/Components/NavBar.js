@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 import moment from 'moment';
 import { NavLink } from 'react-router-dom';
 // import SearchBar from './SearchBar'
@@ -7,8 +8,24 @@ import '../Style/navbar.css'
 
 
 const NavBar = () => {
+    const [userName, setUserName] = useState();
+    const [error, setError]= useState(false);
+    const [loading, setLoading]= useState(false);
     const [abouthovered, setAboutHovered] = useState(false);
     const [resourcehovered, setResourceHovered] = useState(false);
+    useEffect(() => { 
+        const fetchData = async () => { 
+            try {
+                const response = await axios.get('http://localhost:4000/users/66a97d2fcfbd7dacd3512480');
+                setUserName(response.data.userName);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    },[]);
     return (
     <header>
         <nav className="navbar">
@@ -44,8 +61,9 @@ const NavBar = () => {
                     onMouseEnter={() => setAboutHovered(true)}
                     onMouseLeave={() => setAboutHovered(false)}
                     >
-                    <div  ><NavLink to="/about">About</NavLink></div>
+                    <div className="nav-item"><NavLink to="/about">About</NavLink></div>
                         <div className={`dropdown-options ${abouthovered ? 'active-navbar' : 'hidden-navbar'}`}>
+                            {/* ensure to link to specific locationon page */}
                             <NavLink to="/about/our-team">Our Team</NavLink>
                             <NavLink to="/about/our-story">Our Story</NavLink>
                         </div>
@@ -64,7 +82,7 @@ const NavBar = () => {
                     </div>
                     <div className="nav-item"><NavLink to="/quiz">Quiz</NavLink></div>
                     <div className="nav-item"><NavLink to="/locator">Locator</NavLink></div>
-                    <div className="nav-item"><NavLink to="/profile">Profile</NavLink></div>
+                    <div className="nav-item"><NavLink to="/profile">{userName}</NavLink></div>
                     <div className="nav-item"><NavLink to="/contact">Contact Us</NavLink></div>
                 </section>
             </section>

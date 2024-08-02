@@ -1,18 +1,23 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import DocumentMeta from 'react-document-meta';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Registration from './Pages/Register';
 import Profile from './Pages/Profile';
 import Quiz from './Pages/Quiz';
 import Contact from './Pages/Contact';
 import Resources from'./Pages/Resources';
 import NotFound from './Pages/NotFound';
 import Foot from './Components/Foot';
+import axios from 'axios';
+import { Toaster } from 'react-hot-toast';
 
+
+// axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.withCredentials = true
 
 function App() {
   const meta = {
@@ -31,11 +36,13 @@ return (
   <DocumentMeta {...meta}>
     <section>
       <NavBar></NavBar>
+      <Toaster position='bottom-left' toastOptions={{duration:2000}} />
       <main>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/profile" element={<Profile></Profile>}></Route>
+          <Route path="/register" element={<Registration></Registration>}></Route>
           <Route path="/quiz" element={<Quiz></Quiz>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/resources" element={<Resources></Resources>}></Route>
