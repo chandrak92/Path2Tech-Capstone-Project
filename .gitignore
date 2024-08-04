@@ -7,3 +7,6 @@
 # In-progress files
 map/newscript.js
 *101-react-js-main/*
+
+# Package manager folder
+client/node_modules
