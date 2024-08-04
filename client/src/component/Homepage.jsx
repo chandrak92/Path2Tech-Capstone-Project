@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <title>Our Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+import React from 'react'
+
+function Homepage() {
+  return (
+    <div>
     <header>
-        <img>
         <nav class="navbar">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#home">Home</a></li>
@@ -29,11 +21,11 @@
     </header>
     <main>
         <section class="main-view">
-            <img src="assets/noPlanetB.png" alt="Cardboard sign reading 'There is no Planet B'">
+            <img src="assets/noPlanetB.png" alt="Cardboard sign reading 'There is no Planet B'"/>
             <section class="text-overlay">
                 <h1>We are commited to eliminating textile and food waste</h1>
                 <p>By making cycling of clothes and food less daunting</p>
-                <button value="learn-more">Learn More --> </button>
+                <button value="learn-more">{`Learn More -->`}</button>
                 <button value="donate">Donate </button>
             </section>
 
@@ -49,6 +41,8 @@
     <footer>
         <p>&copy; 2024 Our Website</p>
     </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+  )
+}
+
+export default Homepage

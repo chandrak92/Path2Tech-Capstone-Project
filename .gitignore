@@ -1,0 +1,9 @@
+# Environment files
+.env
+
+# OS Files
+*.DS_Store
+
+# In-progress files
+map/newscript.js
+*101-react-js-main/*

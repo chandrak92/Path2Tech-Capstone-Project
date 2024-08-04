@@ -1,0 +1,45 @@
+<!DOCTYPE html>   <!-- defines doc type and version of html being used (html5) -->
+<html lang="en">    <!-- starts html document, specifies language of doc (english) -->
+  <head>    <!-- section contains meta-info about document ie character set, title, css -->
+    <meta charset="UTF-8">    <!-- spcifies character encoding for html doc, ensuring text displays correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- sets viewport to control the layout on mobile browsers, ensuring responsiveness -->
+    
+    <title>Donation Drop-off Locations</title>    <!-- defines document title, appears on browser tab -->
+    
+    <link rel="stylesheet" href="./stylesMap.css">    <!-- contains CSS rules to style the doc -->
+  </head>
+  <body>
+    <h1>Clothes Donation Drop-off Locations</h1>
+    
+    <p>The resources shared here are subject to change. Please check parties' information before you go.</p>
+    <p>Farmers' markets are seasonal and may close on days with bad weather.</p>
+    <p>Donation bins are available at all times (unless when filled to capacity)</p>
+    
+    <!-- Location filtering menu -->
+    <div id="map-legend">
+      <fieldset>
+        <legend>Map Legend</legend>
+        <label for="" >
+          <input type="checkbox" id="bin" checked> <img src="./assets/mapicon2.png" alt="map pin" width="25px">
+          Drop-off Bin
+        </label><br>
+        <label for=""><input type="checkbox" id="farmers-market" checked> <img src="./assets/defaultPin.png" alt="map pin" width="25px">
+          Farmer's Market Drop-off
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- div element w/ id of "map", serving as container for google map -->
+    <div id="map"></div>
+   
+    <script src="./script.js"></script>    <!-- moved up (before bootstrap) so JS file is read first -->
+    
+    <!-- loading script -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=MY_MAPS_API_KEY&loading=async&callback=initMap">
+    </script> <!-- "v=beta&" (placed right before key) to implement gmpclickable option in AdvancedMarkerElement properties &libraries=marker-->
+    <!-- authenticate your application to the Maps JacaScript API using your own API key -->
+    <!-- Google Maps JS API script loaded asynchronously
+    The 'callback'parameter specifies the func to call once API is loaded ('displayMap') -->
+  </body>
+</html>
