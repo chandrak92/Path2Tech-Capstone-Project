@@ -1,0 +1,23 @@
+footer {
+    background-color: #3A7D44 ;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.links-container {
+    background-color: #96E274;
+    width: 50%;
+    height: 150px;
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.links {
+    list-style-type: none;
+    font-size: 14px;
+}

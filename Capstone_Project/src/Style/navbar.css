@@ -1,0 +1,151 @@
+nav {
+    margin: 0px 0px 0px 0px;
+    overflow: visible; /* ensure drop down menu overflow is visible */
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    background-color: #254D32;
+}
+
+.left {
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+    text-shadow: 2px 2px px rgba(0, 0, 0, 0.5);
+}
+
+.clock{
+    background-image: url('../Assets/Earth_Clock.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 200px; 
+    width: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.month, .date, .time {
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.month {
+    font-size: 2.5em;
+}
+
+
+.date {
+    font-size: 2em;
+}
+
+.time {
+    padding-top: 5px;
+    font-size: 1.3em;
+}
+
+.center {
+    margin: 10px 0px 0px 0px;
+    color:#ffffff
+}
+
+.right {
+    margin: 10px 25px 0px 0px;
+}
+
+.bottom {
+    background-color: #F79872;
+    padding: 5px;
+}
+
+.nav-list {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    position:relative;
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    position: relative;
+    text-align: center;
+}
+
+.nav-item a {
+    display: block;
+    font-size: 1em;
+    color: wheat;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* add smoother hover effect */
+}
+
+.nav-item a:hover{
+    border-radius: 5px;
+    background-color: #ea703f;
+    transition: 
+    background-color .3s,
+    color 0.3s; /* add transition for smoother hover effect */
+}
+
+.dropdown-options {
+    position: absolute;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    color: wheat;
+    background-color: #ea703f;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.253);
+    z-index: 1000;
+    border-radius: 8px;
+    min-width: 160px;
+}
+
+.active-navbar {
+    display: block;
+}
+
+.hidden-navbar {
+    display: none;
+}
+
+.dropdown-options a {
+    text-align: center;
+    padding:8px 10px;
+    text-decoration: none;
+    color: wheat;
+    transition: background-color .3s; /* add transition for smoother hover effect */
+    display: block;
+}
+
+.dropdown-options a:hover {
+    background-color: #934527;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .nav-list {
+        font-size: 17px; /* reduce overall font size */
+    }
+    .nav-item a {
+        font-size: 0.8em; /* reduce font size */
+        padding: 8px 15px; /* reduce padding */
+    }
+}

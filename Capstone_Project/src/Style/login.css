@@ -1,0 +1,104 @@
+.card {
+  background-color: #ffffff81;
+  text-align: center;
+  border: 3px solid #FFCF70;
+  padding: 5px 10px 5px 5px;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #332a1b;
+  font-size: 0.9em;
+}
+.card.standalone {
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.card h4,
+.card p {
+  margin: 0;
+  padding: 0;
+}
+.card label {
+  color: #332a1b;
+}
+.card form table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.card .email td,
+.card .password td {
+  text-align: right;
+  font-weight: 600;
+}
+.card .email input,
+.card .password input {
+  width: 100%;
+  max-width: 100%;
+}
+.card .email td {
+  padding-top: 4px;
+}
+.card .password td {
+  padding-bottom: 4px;
+}
+.card .remember,
+.card .forgot {
+  font-size: 70%;
+  font-size: max(70%, 12px);
+}
+.card .remember label {
+  vertical-align: top;
+}
+.card .forgot {
+  text-align: left;
+  font-weight: bold;
+  display: block;
+}
+.card button {
+  display: flex;
+  float: inline-start;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+}
+.loginbtn {
+  font-weight: bold;
+  background: white;
+  border-color: #B1B1B1 #1F1F1F #1F1F1F #B1B1B1;
+  color: #332a1b;
+}
+.signupbtn {
+  font-weight: bold;
+  background: #cc2020;
+  border-color: #ff8282 #960303 #960303 #ff8282;
+  color: white;
+}
+.logoutbtn,
+.quiz-entry .ptsbdg {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  cursor: pointer;
+  user-select: text;
+  text-decoration: none;
+  color: #533f1d;
+  color: #332a1b;
+}
+.logoutbtn,
+.logout-form {
+  color: white;
+  display: inline-block;
+  font-size: 100%;
+}
+.logoutbtn {
+  font-family: revert;
+}
+.logoutbtn:hover,
+.logoutbtn:active {
+  color: inherit;
+  text-decoration: underline;
+}

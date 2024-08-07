@@ -1,0 +1,81 @@
+.body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 14px;
+    padding: 0;
+    box-sizing: border-box; /* no visible changes*/
+}
+.main-view {
+    /* text-align: center; */
+    position: relative;
+    /* height: 60vh; removed to keep from img cut out by "content section" */
+    overflow: hidden;
+}
+
+.main-view img {
+    width: 100%;
+    height: 100%; /* make image stretch */
+    object-fit: cover; /* prevents image stretching while ensuring image covers container*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; /* ensures image is behind text and whitewash */
+}
+
+.main-view::before {  /* white cast over image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1; /* ensure white cast is at the front relative to img */
+    pointer-events: none; /* might eliminate this line; not sure I need it */
+}
+
+.text-overlay {
+    /* position: absolute; */
+    /* top: 10%;
+    left: 5;
+    transform: translateX(-50%); */
+    color: #333;
+    z-index: 1; /* ensure text is aboove image & whitewash*/
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-overlay h1, p, button {
+    margin: 0;
+    /* text-align: left; */
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Roboto", sans-serif;
+}
+
+.text-overlay h1 {
+    font-size: 8vw;  /* responsive font size */
+    font-weight: 600;
+    margin-left: 0;
+}
+
+.text-overlay p {
+    font-size: 3vw; /* responsive font size */
+}
+
+.text-overlay button {
+    padding: 20px;
+    background-color: #69B578;
+    border-radius: 10px;
+    margin: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 6px #325539;
+    border: none;  /* eliminated border*/
+    cursor: pointer; /* changed cursor to pointer on hover*/
+}
+
+.text-overlay button:hover {
+    background-color: #608f6a; /* slightly darker shade for hover effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}

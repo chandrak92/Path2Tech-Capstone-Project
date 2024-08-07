@@ -1,0 +1,83 @@
+.contact-container{
+    width: 40%;
+    margin: 5% auto;
+    border-radius: 20px;
+    padding: 15px;
+    border-color: olive;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-drop {
+    background-color: #f79872;
+    width: inherit;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.founder-email {
+    position: relative;
+    display: block;
+    color: wheat;
+    text-align: center;
+    padding: 5px ;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.founder-email:hover {
+    color: #533F1D;
+    transition: color 0.3s; /* add transition for smoother hover effect */
+}
+
+.dropdown-contact {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 10px;
+    color: wheat;
+    background-color: #ea703f;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    min-width: 160px;
+    z-index: 1000;
+    flex-direction: column;
+    top: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    list-style-type: none; /* removes list bullet points */
+    padding: 10px;
+}
+.active-contact {
+    display: block;
+}
+.hidden-contact {
+    display: none;
+}
+
+.dropdown-contact .founder {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: wheat;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s; /* add transition for smoother hover effect */
+}
+
+.dropdown-contact .founder:hover {
+    background-color: #934527;
+    border-radius: 10px; /* not sure if this is necessary */
+}
+
+.dropdown-contact:hover .dropdown-contact {
+    display: block;
+}
+  
