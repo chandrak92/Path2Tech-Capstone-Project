@@ -20,10 +20,9 @@ function initMap() {
     //   {lat: 40.730610, lng: -73.935242, name: 'Drop-off Location 1'},   // objects in this array
     //   {lat: 40.712776, lng: -74.005974, name: 'Drop-off Location 2'},
     //   {lat: 40.758896, lng: -73.985130, name: 'Drop-off Location 3'},
-    //   {}
     // ];
 
-    const preSignedURL = "https://textile-donation-locations.s3.us-east-1.amazonaws.com/donationLocations.json?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQC%2Fz1xNCi6wbUKkq0ijfQrIOka3%2FJFZ7dS6Xyqrx7vGFgIgXmgaeXoRo%2FOAGJXJ9%2FSQ9REMYs3QWlJsPfF%2B3eQN7E4q8QIIs%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mjk3MTU2NDU4MTciDL31uFmUqNQATt2FKirFAkkMuFLPNF8LozkmMtBlJeH0wcPtGjYb3fXILHlHH5RlltIPID59bitxRbcWdYVXM8cF8hbKRQ9WyFGdWOFlw6vEgUXrn8H5B%2FPVWTJdy132kBgg6aC5eN2ZhU17jOYvxqx7DbF6qhOR2e6hUmf%2F4uNsKJvbN9k3%2BA0qIzxdgKMXkqoN26KRzNi5lMyANmI5CbfJo59uYv%2FaobpiPVViDmoGMUxjmMgLSR4K%2F%2F5KdxMeheTreJB7BeXbaT%2BeUzPak%2B0sekAUccZoABUtYShgNgGyJxv0jcdLib32192A0fUxFBdusmvA%2BkeH07yGVLTSr4aI9q1HwLBuv1Yg1xT7RCrlmf70bxKYoCaYjPRu1VcKylPO9dhywIZOseRnHC9rzBOjQ7xiZQJ0DsIZcB38WkQ%2FKY5FubU2uW%2BzPVHsk%2BZza7jUI%2Fsw28W7tQY6swId2MfejADKaloOr36h8Uz%2BDuv9AEkYLI2ip8nzDQIT1b%2BZXsOwGr4o%2FdiYQbTtox8sgkvRGDdzxgUcaUwrLsGVX78USarxbyyjodV2wk78cbezDxXfJLP%2F%2BfaPSuC9%2F2XmdxCAkQhEcPdTuKZ41jYfSmmW%2FGD1zPdgf%2BhwGomaZQwXzOK8Y421UwGGtcIIXpmhNjhQPHgSAwnQWDRqy91j%2Fl1sz5NlXMupc9rEOrWBR8geOIUiZtiQ4zRUSgJB3bXWbcYMnk9al0DWjPwFyUIBwtYlJ2yp4H58e5Iyqct3HWklZ6F1xhPbxMgxO5mWIF7U2mEpYtQHrBzVtouUcAenQvGv1s%2B4P9p17aECcpL7FModgijC8Eu3T67oBPPdP0qbI8Nei8JAXziSlwq6mYNm3BQA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240804T021014Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIAZFHP2GV4U4YXSDO2%2F20240804%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c7d4c837f99949a8b33f7500372d2902629ad7dd0abff7d0a7e958d3366c164a"
+    const preSignedURL = "PRE-SIGNED URL HERE"
     // should I use "fetch" to retrieve data from a file w/in my local files?
     // update: JSON file hosted in the cloud to offset client server.
     fetch(preSignedURL)   // keep in mind this pre-signed URL expires. for dev purposes only. I will set S3 to public when ready
