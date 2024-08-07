@@ -81,7 +81,7 @@ const NavBar = () => {
                             </div>
                     </div>
                     <div className="nav-item"><NavLink to="/quiz">Quiz</NavLink></div>
-                    <div className="nav-item"><NavLink to="/locator">Locator</NavLink></div>
+                    <div className="nav-item"><a href="/map/locations.html">Locator</a></div>
                     <div className="nav-item"><NavLink to="/profile">{userName}</NavLink></div>
                     <div className="nav-item"><NavLink to="/contact">Contact Us</NavLink></div>
                 </section>
