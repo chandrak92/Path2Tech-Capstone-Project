@@ -1,15 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import userIcon from "../Assets/profileicon.jpg";
 import "../Style/profile.css";
 
-const Profile = () => {
-  const [userName, setUserName] = useState();
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName]= useState();
-  const [birthDate, setBirthDate]= useState();
-  const [email, setEmail]= useState();
+const Profile = ({user}) => {
   const [error, setError]= useState(false);
   const [loading, setLoading]= useState(false);
   const [comments, setComments] = useState([]);
@@ -28,35 +22,17 @@ const Profile = () => {
     }
   };
 
-  useEffect(() => { 
-      const fetchData = async () => { 
-          try {
-              const response = await axios.get('http://localhost:4000/users/66a97d2fcfbd7dacd3512480');
-              setFirstName(response.data.firstName);
-              setLastName(response.data.lastName);
-              setUserName(response.data.userName);
-              setBirthDate(response.data.birthDate);
-              setEmail(response.data.email);
-              setPoints(response.data.points);
-            } catch (error) {
-              setError(error);
-          } finally {
-              setLoading(false);
-          }
-      };
-      fetchData();
-  },[]);
 // if else statement to render profile
 
   return(
     <>
       <section className="profile-head">
-        <h1 style={{ padding: '20px' }}>{userName}'s Profile</h1>
+        <h1 style={{ padding: '20px' }}>{user.userName}'s Profile</h1>
         <div className="profile-icon" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
           <img src={userIcon} alt="User Icon" style={{ width: '60px', height: '60px', borderRadius: '50%' }} />
-          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{firstName}{lastName}</p><br />
-          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{email}</p><br />
-          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{birthDate}</p><br />
+          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{user.firstName}{user.lastName}</p><br />
+          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{user.email}</p><br />
+          <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{user.birthDate}</p><br />
         </div>
         <div className="profile-points" style={{ padding: '20px', textAlign: 'center' }}>
           <h3>Current Points</h3>
