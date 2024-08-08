@@ -1,3 +1,6 @@
+body {
+  margin-top: 50px;
+}
 #map {
   height: 400px;
   width: 75%;
@@ -9,4 +12,10 @@
   border: solid #254d32;
   margin: 20px;
   padding: 7px 20px 35px;
+}
+
+.end-page-decore {
+  width: 80%;
+  display: flex;
+  align-items: center;
 }
