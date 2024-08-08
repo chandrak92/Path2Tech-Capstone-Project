@@ -107,28 +107,6 @@ function App() {
 },[user]);
 
 return (
-<<<<<<< HEAD
-  <section>
-    <NavBar></NavBar>
-    <main>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/about/our-team" element={<About></About>}></Route>
-        <Route path="/about/our-story" element={<About></About>}></Route>
-        <Route path="/profile" element={<Profile></Profile>}></Route>
-        <Route path="/quiz" element={<Quiz></Quiz>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
-        <Route path="/resources" element={<Resources></Resources>}></Route>
-        <Route path="/resources/organizations" element={<Resources></Resources>}></Route>
-        <Route path="/resources/actions" element={<Resources></Resources>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-        {/*  <Route path="/about/:id" element={<About></About>}></Route> is a way to include parameters in your */}
-      </Routes>
-    </main>
-    <Foot></Foot>
-  </section> 
-=======
   <DocumentMeta {...meta}>
     <section>
       <header>
@@ -166,7 +144,6 @@ return (
       </footer>
     </section>
   </DocumentMeta>
->>>>>>> origin/main
 );
 }
 
