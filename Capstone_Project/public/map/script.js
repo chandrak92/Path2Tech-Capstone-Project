@@ -15,7 +15,7 @@ function initMap() {
       zoom: 10
     });
 
-    const preSignedURL = "URL_HERE"
+    const preSignedURL = "https://textile-donation-locations.s3.us-east-1.amazonaws.com/donationLocations3.json?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED8aCXVzLWVhc3QtMSJHMEUCIQDV6CsRjkeqTAzywPzxxatdfdhtspPTWYb3VqOSUPGZCwIgcwi4ahsDvOnTAAUOsIj5Swy7wQrh0ufaTTOrHW5NSiQq6AIINxAAGgw2Mjk3MTU2NDU4MTciDKh7osjylIwcZtn7uirFAuDphC5RC8NnJCVRY1UeRjIu4mBE3bXdF%2FcZvtjewj6E7woopz%2BseWEnx3FqStLsRxaQrWWtPg73JQoNhYu%2Bpcog3pTrSNeWiSNpWmUX1DpCaaLwhd2%2FxqvxPupm6KxyxQ9Ol9MBDXagAbw%2FSpX2njTYYVTdmjv138q8twX%2F8iy0WOiV8kW5GUxdWbi7O%2Fcy072Ov9R8QQEUcnY3S2yzUHTjlPU7A6iYl1UduNDO4TFZdtq7M54%2BbRTBAhmpe%2FfajUHQmntmsow9zxCLGtsWuuJDOBfcg4hkkAV92sLvMbcVsLXaqXWAh6wGY99AbQL1UIfRyULYC42ObfEND4iKN%2F6da3u7ikRWiE7hYQMZpijA%2BMCBfGevP%2F8onnlNY6%2FzUn6zXYt%2FAunTUarnMZ66WNU9OPmicOIEUrAOzthYJoqUBl7LInIw%2FoLVtQY6swIq%2BmN6%2B66Gh0Q8vFVaVliCYWl5TSyhmIqBanM6PwhO4Q6iKT6YfRNwdSAUeVO654m0hPEB5QTDVSuLV62z3VuoAHuf3E%2FgG%2Bm86p7hKiXE8lpiZJcHhkxHko0gViBwGzKSpINHKKoOjwIxS%2By6MWt5%2BOLugBdhnd9H%2F8haIuoxonQBlGPCKislLFtIslmk2z8cBjTb0hvDUbcN%2BYJWSKeuwLya%2BdGKaKF6eORdijRkWphfLHMthWzSPatJBA0BaLkFbVGqS6RcA%2BWWXh8l3%2Fv1usfS3AkGg4JZbWdU0%2F3hYp4Sjg%2Bd7vTE%2FSz3bE0l6lmk%2BVuk5cJu17xtOkVWEq4AFAG5MJrrXkm5EcLKeROZEZt054hY32oHIA3WeTXnjn5XZj5l3VZgWs19E4E7ZBEXHymd&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240808T220748Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14400&X-Amz-Credential=ASIAZFHP2GV4TA77CS63%2F20240808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f02b615dc3a7ef6a76425130e396de8a87db781bfea3766fa034e0cf509d2bcb"
     
     fetch(preSignedURL)
       .then(response => response.json())
