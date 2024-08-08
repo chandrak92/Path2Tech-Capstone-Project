@@ -3,26 +3,25 @@
     font-weight: 400;
     margin: 14px;
     padding: 0;
-    box-sizing: border-box; /* no visible changes*/
+    box-sizing: border-box; 
 }
 .main-view {
-    /* text-align: center; */
     position: relative;
-    /* height: 60vh; removed to keep from img cut out by "content section" */
+
     overflow: hidden;
 }
 
 .main-view img {
     width: 100%;
-    height: 100%; /* make image stretch */
-    object-fit: cover; /* prevents image stretching while ensuring image covers container*/
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2; /* ensures image is behind text and whitewash */
+    z-index: -2;
 }
 
-.main-view::before {  /* white cast over image */
+.main-view::before {
     content: '';
     position: absolute;
     top: 0;
@@ -30,37 +29,33 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: -1; /* ensure white cast is at the front relative to img */
-    pointer-events: none; /* might eliminate this line; not sure I need it */
+    z-index: -1;
+    pointer-events: none;
 }
 
 .text-overlay {
-    /* position: absolute; */
-    /* top: 10%;
-    left: 5;
-    transform: translateX(-50%); */
+
     color: #333;
-    z-index: 1; /* ensure text is aboove image & whitewash*/
+    z-index: 1;
     padding: 20px;
     border-radius: 10px;
 }
 
 .text-overlay h1, p, button {
     margin: 0;
-    /* text-align: left; */
     display: flex;
     justify-content: flex-start;
     font-family: "Roboto", sans-serif;
 }
 
 .text-overlay h1 {
-    font-size: 8vw;  /* responsive font size */
+    font-size: 8vw;
     font-weight: 600;
     margin-left: 0;
 }
 
 .text-overlay p {
-    font-size: 3vw; /* responsive font size */
+    font-size: 3vw;
 }
 
 .text-overlay button {
@@ -71,11 +66,11 @@
     width: 150px;
     text-align: center;
     box-shadow: 0 4px 6px #325539;
-    border: none;  /* eliminated border*/
-    cursor: pointer; /* changed cursor to pointer on hover*/
+    border: none;
+    cursor: pointer;
 }
 
 .text-overlay button:hover {
-    background-color: #608f6a; /* slightly darker shade for hover effect */
+    background-color: #608f6a;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }

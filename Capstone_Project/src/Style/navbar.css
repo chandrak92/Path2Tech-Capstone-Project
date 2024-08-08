@@ -1,6 +1,6 @@
 nav {
     margin: 0px 0px 0px 0px;
-    overflow: visible; /* ensure drop down menu overflow is visible */
+    overflow: visible;
 }
 
 .top {
@@ -90,7 +90,7 @@ nav {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s; /* add smoother hover effect */
+    transition: background-color 0.3s;
 }
 
 .nav-item a:hover{
@@ -98,7 +98,7 @@ nav {
     background-color: #ea703f;
     transition: 
     background-color .3s,
-    color 0.3s; /* add transition for smoother hover effect */
+    color 0.3s;
 }
 
 .dropdown-options {
@@ -140,12 +140,13 @@ nav {
     display: block;
 }
 
+
 @media (max-width: 800px) {
     .nav-list {
-        font-size: 17px; /* reduce overall font size */
+        font-size: 17px;
     }
     .nav-item a {
-        font-size: 0.8em; /* reduce font size */
-        padding: 8px 15px; /* reduce padding */
+        font-size: 0.8em;
+        padding: 8px 15px;
     }
 }
