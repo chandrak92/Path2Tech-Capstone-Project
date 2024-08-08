@@ -66,7 +66,7 @@ const NavBar = ({ isLoggedIn, userName, onLogin, onLogout, loginData, loginUser,
                             </div>
                     </div>
                     <div className="nav-item"><NavLink to="/quiz">Quiz</NavLink></div>
-                    <div className="nav-item"><NavLink to="/locator">Locator</NavLink></div>
+                    <div className="nav-item"><a href="/map/locations.html">Locator</a></div>
                     {isLoggedIn ? (
                         <div
                         className="nav-item"
