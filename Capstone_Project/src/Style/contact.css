@@ -1,8 +1,19 @@
+.contact-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Assets/CanyonPhoto.jpg');
+    background-size: cover;
+}
+
 .contact-container{
-    width: 40%;
+    width: 60%;
+    height:70%;
     margin: 5% auto;
+    position: relative;
     border-radius: 20px;
-    padding: 15px;
+    padding: 30x;
     border-color: olive;
     border: solid 2px;
     display: flex;
@@ -11,36 +22,42 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    background-color: #9dbf9ec9;
+    font-size: 1.2rem;
 }
 
 .contact-drop {
-    background-color: #f79872;
-    width: inherit;
-    padding: 5px;
+    background-color: #ea703f;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
+    align-content: center;
 }
 
 .founder-email {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    width: 300px;
     color: wheat;
     text-align: center;
-    padding: 5px ;
+    padding: 5px;
     text-decoration: none;
     border-radius: 10px;
 }
 
 .founder-email:hover {
     color: #533F1D;
-    transition: color 0.3s; /* add transition for smoother hover effect */
+    transition: color 0.3s;
 }
 
 .dropdown-contact {
     position: absolute;
+    width: inherit;
     top: 100%;
     left: 0;
     border-radius: 10px;
@@ -53,12 +70,14 @@
     top: 100%;
     border-radius: 10px;
     overflow: hidden;
-    list-style-type: none; /* removes list bullet points */
+    list-style-type: none;
     padding: 10px;
 }
+
 .active-contact {
     display: block;
 }
+
 .hidden-contact {
     display: none;
 }
@@ -69,15 +88,67 @@
     color: wheat;
     text-align: center;
     border-radius: 10px;
-    transition: background-color 0.3s; /* add transition for smoother hover effect */
+    transition: background-color 0.3s;
 }
 
 .dropdown-contact .founder:hover {
     background-color: #934527;
-    border-radius: 10px; /* not sure if this is necessary */
+    border-radius: 10px; 
 }
 
 .dropdown-contact:hover .dropdown-contact {
     display: block;
 }
-  
+
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-input label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.contact-input input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}
+
+.contact-input textarea{
+    padding: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+}
+
+.contact-button {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: wheat;
+    background-color: #ea703f;
+    cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #7e2e0e;
+}

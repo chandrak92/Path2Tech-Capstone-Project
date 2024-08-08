@@ -9,7 +9,7 @@ const test = async (req, res) => {
 const registerUser = async (req, res) => {
     console.log("I'm here")
     try {
-        const {firstName, userName, email, password} = req.body;
+        const {firstName, lastName, birthDate, userName, email, password} = req.body;
         // check required fields
         if (!firstName) {
             return res.json({
@@ -31,6 +31,8 @@ const registerUser = async (req, res) => {
 
         const user = await User.create({
             firstName,
+            lastName,
+            birthDate,
             userName,
             email,
             password
