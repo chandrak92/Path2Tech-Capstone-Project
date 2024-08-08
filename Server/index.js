@@ -1,12 +1,3 @@
-// import express from "express";
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
-// import cors from "cors";;
-// import { User } from "./Models/userSchema.js";
-
-// dotenv.config();
-// const app= express();
-
 const dotenv = require("dotenv").config()
 const express = require("express");
 const cors = require("cors");
@@ -20,28 +11,18 @@ const app = express();
 mongoose.connect(process.env.SPECIAL_KEY)
 .then(() => console.log("Database Connected"))
 .catch((error) => console.log("Database not connected", error))
-// const db= async() => {
-//     try{
-//         await mongoose.connect(`${process.env.SPECIAL_KEY}`)
-//     } catch(error) {
-//         console.log(error)
-//     }
-// }
+
 
 //middleware
 app.use(express.json());
 // app.use(cookieParser);
 app.use(express.urlencoded({extended: false}));
-
-// finalize connection to DB, call back function
-// db()
-
 app.use("/", require("./Routes/authRoutes"))
+
 
 // app.get("/", (req,res) => {
 //     res.send("hello!")
 // })
-
 
 // app.use(cors());
 // app.use(express.urlencoded());
