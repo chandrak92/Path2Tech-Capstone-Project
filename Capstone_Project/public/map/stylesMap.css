@@ -5,8 +5,8 @@
 #map-legend { /* I would like to place this legend over the map, to the left */
   height: 135px; /* with a low opacity */
   width: 235px;
-  background-color: #69b578;
+  background-color: #69b578ce;
   border: solid #254d32;
   margin: 20px;
-  padding: 10px;
+  padding: 7px 20px 35px;
 }
