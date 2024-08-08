@@ -1,5 +1,5 @@
 footer {
-    background-color: #3A7D44;
+    background-color: #254D32;
     padding: 20px 0;
 }
 .foot-container {
@@ -32,7 +32,7 @@ div  {
 }
 
 .links {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
@@ -42,6 +42,7 @@ div  {
 
 footer .copyright {
     /* right: 20px; */
+    color: white;
     max-width: 40%;
     padding: 20px;
     margin-top: 8px;
@@ -52,7 +53,7 @@ footer .copyright {
 }
 
 .copyright a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: 700;
 }

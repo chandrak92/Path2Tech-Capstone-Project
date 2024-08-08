@@ -19,6 +19,7 @@ const Foot = () => {
                 <div className="copyright">
 
                     <p><i>Disclaimer: This webapp was created as a FullStack development project. This project is not affiliated with any third party organizations.</i></p>
+                    <br></br>
                     <p>Coding Guppies. 2024 All Rights Reserved.</p>
                 </div>
             </div>
