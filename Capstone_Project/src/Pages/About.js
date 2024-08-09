@@ -4,7 +4,7 @@ import SimoneImage from '../Assets/Simone.png';
 import YarminImage from '../Assets/Yarmin.jpg';
 import "../Style/about.css";
 
-const About = () => {
+function About()  {
     return(
         <section className="about-us-container">            
         <h2>About Us</h2><br />

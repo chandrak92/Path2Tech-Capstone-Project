@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 const HomeBody = () => {
     return (
         <section className="body">
-            <h2>Main Content</h2>
-            <p>This is the main content of the homepage.</p>
-            <ul>
-                <li className=""><NavLink to="/about">About</NavLink></li>
-            </ul>
+            <h2>Codding Guppies Project</h2>
+            <p>We aim to empower you to easily adobt a zero-waste lifestyle as it pertains to clothes, and other textiles, and food.</p>
+            <p>We encourage you to take community-minded actions by proving you easy access to how you can conviniently recycle unwanted belongings.</p>
+            <p>Prevent reusable or recycable textiles from piling up on landfills.</p>
         </section>
 )
 }
