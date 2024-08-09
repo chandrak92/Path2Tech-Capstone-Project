@@ -6,7 +6,7 @@ nav {
 .top {
     display: flex;
     justify-content: space-between;
-    background-color: #3A7D44;
+    background-color: #254D32;
 }
 
 .left {
@@ -90,7 +90,6 @@ nav {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
     transition: background-color 0.3s;
 }
 

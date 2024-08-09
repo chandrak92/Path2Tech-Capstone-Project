@@ -17,31 +17,26 @@
     
     <!-- Location filtering menu -->
     <div id="map-legend">
-        <h3>Map Legend</h3>
+      <fieldset>
+        <legend>Map Legend</legend>
         <label for="" >
-          <input type="checkbox" id="bin" checked> <img src="./assets/mapPin_F79872.png" alt="map pin" width="25px">
+          <input type="checkbox" id="bin" checked> <img src="./assets/mapicon2.png" alt="map pin" width="25px">
           Drop-off Bin
         </label><br>
-        <label for=""><input type="checkbox" id="farmers-market" checked> <img src="./assets/mapPin_3A7D44.png" alt="map pin" width="25px">
+        <label for=""><input type="checkbox" id="farmers-market" checked> <img src="./assets/defaultPin.png" alt="map pin" width="25px">
           Farmer's Market Drop-off
-        </label><br>
-        <label for=""><input type="checkbox" id="thrift-store" checked> <img src="./assets/mapPin_FFCF70.png" alt="map pin" width="25px">
-          Thrift Store
         </label>
+      </fieldset>
     </div>
 
     <!-- div element w/ id of "map", serving as container for google map -->
     <div id="map"></div>
-    
-    <div class="end-page-decore">
-      <img src="./assets/textileRecyCartoon2.png" alt="People recycling clothing" width="100%">
-    </div>
    
     <script src="./script.js"></script>
     
     <!-- loading script -->
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=MY_API_HERE&loading=async&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=MAPS_KEY_HERE&loading=async&callback=initMap">
     </script>
 
   </body>

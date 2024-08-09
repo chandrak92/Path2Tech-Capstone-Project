@@ -1,6 +1,3 @@
-body {
-  margin-top: 50px;
-}
 #map {
   height: 400px;
   width: 75%;
@@ -8,16 +5,8 @@ body {
 #map-legend { /* I would like to place this legend over the map, to the left */
   height: 135px; /* with a low opacity */
   width: 235px;
-  background-color: #69b578ce;
+  background-color: #69b578;
   border: solid #254d32;
   margin: 20px;
-  padding: 7px 20px 35px;
-}
-
-.end-page-decore {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  padding: 10px;
 }

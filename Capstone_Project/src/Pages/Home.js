@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import HomeBody from "../Components/HomeBody";
 import "../Style/homebody.css";
 import image from "../Assets/noPlanetB.png"
@@ -12,10 +11,8 @@ const Home = () => {
                 <section className="text-overlay">
                     <h1>We are committed to eliminating textile and food waste</h1>
                     <p>By making the recycling of clothes and food less daunting!</p>
-                    <div className="home-buttons">
-                        <NavLink to="/about"><button value="learn-more">Learn More</button></NavLink>
-                        <a href="http://localhost:3000/map/locations.html"><button value="donate" >Donate</button></a>
-                    </div>
+                    <button value="learn-more">Learn More</button>
+                    <button value="donate">Donate</button>
                 </section>
             </div>
             <HomeBody></HomeBody>
