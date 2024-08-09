@@ -42,15 +42,14 @@
 .card .password td {
   padding-bottom: 4px;
 }
-.card .remember,
-.card .forgot {
+.card .remember {
   font-size: 70%;
   font-size: max(70%, 12px);
 }
 .card .remember label {
   vertical-align: top;
 }
-.card .forgot {
+.card {
   text-align: left;
   font-weight: bold;
   display: block;
@@ -76,29 +75,4 @@
   background: #cc2020;
   border-color: #ff8282 #960303 #960303 #ff8282;
   color: white;
-}
-.logoutbtn,
-.quiz-entry .ptsbdg {
-  background: none !important;
-  border: none;
-  padding: 0 !important;
-  cursor: pointer;
-  user-select: text;
-  text-decoration: none;
-  color: #533f1d;
-  color: #332a1b;
-}
-.logoutbtn,
-.logout-form {
-  color: white;
-  display: inline-block;
-  font-size: 100%;
-}
-.logoutbtn {
-  font-family: revert;
-}
-.logoutbtn:hover,
-.logoutbtn:active {
-  color: inherit;
-  text-decoration: underline;
 }

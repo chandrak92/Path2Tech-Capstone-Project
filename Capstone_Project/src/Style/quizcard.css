@@ -1,20 +1,33 @@
 .selection-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     margin: 0;
     padding: 10px;
+    height: 100vh;
+    background-image: url('../Assets/LakePhoto.jpg');
+    background-size: cover;
 }
 
-h1 {
-    font-size: 30px;
+.selection-container h1 {
+    top:0;
+    margin:20px;
+    display: flex;
+    color: ghostwhite;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 3rem;
+    z-index:1;
+    text-shadow: 
+    -1px -1px 0 #332a1b,  
+     1px -1px 0 #332a1b,
+    -1px  1px 0 #332a1b,
+     2px  1px 0 #332a1b;
 }
 
 .quizpage-container{
     display: flex;
-    flex-direction: center;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -25,16 +38,22 @@ h1 {
 .food-waste, .clothing-waste, .food-card, .clothing-card {
     font-size: 25px;
     font-weight: 500;
-    margin: 0;
-    padding: 10px;
     cursor: pointer;
-    
 }
 
 .food-card, .clothing-card {
-    border: solid 3px;
+    border: solid black 2px;
     border-radius: 9px;
-    box-shadow: 5px 5px #2e2e2e6b;
-    margin: 10px;
-    padding: 5px;
+    box-shadow: 0px 15px 20px #11052c54;
+    margin: 70px 50px;
+    padding: 70px;
+    background-color: #9dbf9ebe;
+    transition:
+    background-color 0.3s;
+}
+
+.food-card:hover, .clothing-card:hover {
+    color:ghostwhite;
+    background-color: #3a7d44ce;
+    transition: color 0.3s;
 }

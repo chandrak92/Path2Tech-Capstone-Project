@@ -25,8 +25,13 @@ const userSchema= new mongoose.Schema({
     birthDate: {
         type: Number,
     },
-    points: {
-        type: Number,
+    // points: {
+    //     type: Number,
+    // },
+    profileImage:
+    {
+        data: Buffer,
+        contentType: String
     }
     // "username":{"type":"String", "required":true},
     // "password":{"type":"String", "required":true},

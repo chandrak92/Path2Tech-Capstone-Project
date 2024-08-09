@@ -31,35 +31,86 @@ function App() {
     }
   };
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState('');
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName]= useState();
-  const [error, setError]= useState(false);
-  const [loading, setLoading]= useState(false);
+  // const [isRegistered, setIsRegistered] = useState(false);
+  // const [userName, setUserName] = useState('');
+  // const [firstName, setFirstName] = useState();
+  // const [lastName, setLastName]= useState();
+  // const [email, setEmail]= useState();
+  // const [password, setPassword]= useState();
+  // const [birthDate, setBirthDate]= useState();
+  // const [profileImage, setProfileImage]= useState();
+  // const [error, setError]= useState(false);
+  // const [loading, setLoading]= useState(false);
   const navigate = useNavigate();
+  // Login
   const [data, setData] = useState({
     email: "",
     password: ""
   });
+  // Register
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    birthDate: "",
+    profileImage: "",
+    userName: "" 
+  });
+  // Database i.e once logged in
   const [user, setUser]= useState({});
 
+  //Registration Logic
+  const registerUser = async (e) => {
+    e.preventDefault();
+    const {firstName, lastName, birthDate, profileImage, userName, email, password} = userData;
+    console.log(firstName, lastName, birthDate, profileImage, userName, email, password);
+    console.log(`${process.env.REACT_APP_URL}/register`);
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_URL}/register`, {
+        firstName, lastName, birthDate, profileImage, userName, email, password
+      });
+      console.log(response);
+      setUser(response.data[0]);
+      if(data.error) {
+        toast.error(data.error);
+      } else {
+        setUserData({
+          email: "",
+          password: "",
+          firstName: "",
+          lastName: "",
+          birthDate: "",
+          profileImage: "",
+          userName: ""
+        });
+        toast.success("Registration Successful. Welcome!");
+        navigate("/profile");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  // function handleRegister() {
+  //   setIsRegistered(true);
+  // };
+
+  //Login Logic
   function handleLogin() {
     setIsLoggedIn(true);
-    setUserName('');
-  }
+  };
 
   function handleLogout() {
     setIsLoggedIn(false);
     setUser({});
-    setUserName('');
-  }
+  };
 
   const loginUser = async (e) => {
     e.preventDefault()
-    const {email, password} = data
-    console.log(email, password)
-    console.log(`${process.env.REACT_APP_URL}/login`)
+    const {email, password} = data;
+    console.log(email, password);
+    console.log(`${process.env.REACT_APP_URL}/login`);
     try {
       const response= await axios.post(`${process.env.REACT_APP_URL}/login`,{
         email,
@@ -74,11 +125,11 @@ function App() {
         toast.error(response.error)
       } else {
         setData({});
-        navigate("/")
+        toast.success("Login Successful. Welcome!");
+        navigate("/");
       }
     } catch(error) {
-      console.log(error)
-      console.log("ASDF")
+      console.log(error);
     }
   };
 
@@ -87,15 +138,8 @@ function App() {
       // try {
           if (Object.keys(user).length > 0) {
           setIsLoggedIn(true);
-          setUserName(user.userName);
-          setFirstName(user.firstName);
-          setLastName(user.lastName);
-          setUserName(user.userName);
         } else {
           setIsLoggedIn(false);
-          setUserName('');
-          setFirstName('');
-          setLastName('');
         }
       // } catch (error) {
       //     setError(error);
@@ -111,8 +155,8 @@ return (
     <section>
       <header>
         <NavBar
+        username={user.userName}
         isLoggedIn={isLoggedIn}
-        userName={userName} 
         onLogout={handleLogout}
         onLogin={handleLogin}
         loginData={data}
@@ -120,7 +164,7 @@ return (
         setLoginData={setData}
         >
         </NavBar>
-        <Toaster position='bottom-left' toastOptions={{duration:2000}} />
+        <Toaster position='bottom-left' toastOptions={{duration:4000}} />
       </header>
       <main className="app-content">
         <Routes>
@@ -128,10 +172,14 @@ return (
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/profile" element={isLoggedIn ?
           <Profile
-          user={user}
-          >
+          user={user}>
           </Profile> : <Navigate to="/register" />}></Route>
-          <Route path="/register" element={<Registration></Registration>}></Route>
+          <Route path="/register" element={
+            <Registration
+            registerUser={registerUser}
+            userData={userData}
+            setUserData={setUserData}>
+            </Registration>}></Route>
           <Route path="/quiz" element={<SelectQuiz></SelectQuiz>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route>
           <Route path="/resources" element={<Resources></Resources>}></Route>

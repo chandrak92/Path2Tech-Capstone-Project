@@ -5,7 +5,7 @@ import image from "../Assets/noPlanetB.png"
 
 const Home = () => {
     return(
-        <section>
+        <section className="home-container">
             <div className="main-view">
                 <img src={image} alt="Cardboard sign reading 'There is no Planet B'"/>
                 <section className="text-overlay">

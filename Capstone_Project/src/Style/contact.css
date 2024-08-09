@@ -8,19 +8,21 @@
 }
 
 .contact-container{
+    top:0;
     width: 60%;
-    height:70%;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
     margin: 5% auto;
-    position: relative;
+    padding: 10px 30px;
     border-radius: 20px;
-    padding: 30x;
-    border-color: olive;
     border: solid 2px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    align-content: center;
     align-items: center;
     background-color: #9dbf9ec9;
     font-size: 1.2rem;
