@@ -31,7 +31,7 @@ function App() {
     }
   };
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [isRegistered, setIsRegistered] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
   // const [userName, setUserName] = useState('');
   // const [firstName, setFirstName] = useState();
   // const [lastName, setLastName]= useState();
@@ -71,7 +71,7 @@ function App() {
         firstName, lastName, birthDate, profileImage, userName, email, password
       });
       console.log(response);
-      setUser(response.data[0]);
+      setUser(response.data);
       if(data.error) {
         toast.error(data.error);
       } else {
@@ -85,16 +85,19 @@ function App() {
           userName: ""
         });
         toast.success("Registration Successful. Welcome!");
-        navigate("/profile");
+        setIsRegistered(true);
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-  // function handleRegister() {
-  //   setIsRegistered(true);
-  // };
+ useEffect(() => {
+  if (isRegistered) {
+    console.log(user);
+    navigate("/profile");
+  }
+ }, [isRegistered, navigate, user]);
 
   //Login Logic
   function handleLogin() {
@@ -155,7 +158,7 @@ return (
     <section>
       <header>
         <NavBar
-        username={user.userName}
+        username={user?.userName}
         isLoggedIn={isLoggedIn}
         onLogout={handleLogout}
         onLogin={handleLogin}

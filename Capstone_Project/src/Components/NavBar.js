@@ -82,7 +82,7 @@ const NavBar = ({
                         onMouseEnter={() => setProfileHovered(true)}
                         onMouseLeave={() => setProfileHovered(false)}
                         >
-                            <NavLink to="/profile">{username}</NavLink>
+                            <NavLink to="/profile">{username && username}</NavLink>
                             <div className={`dropdown-options ${profilehovered ? 'active-navbar' : 'hidden-navbar'}`}>
                              <button onClick={onLogout}>Logout</button>
                             </div>

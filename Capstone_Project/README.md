@@ -20,14 +20,6 @@
   <p>Hi! I'm <strong>Yarmin Reyes</strong>. Happy you stopped by to check out this project my team and I built. When I first pitched the idea for this project, I didn't know my team would accept it with open arms. It was a pleasure to share the challenge of bringing this vision to life with individuals who's enthusiasm augmented my own.</p>
 </div>
 
-<div display="flex" align=center>
-   <a href="https://www.linkedin.com/in/chandra-white/">
-<img alt="chandra white" src="https://github.com/chandrak92/Path2Tech-Capstone-Project/assets/chandraw.jpg" width="250"></br><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-   </a></br>
-  <p>My name is Chandra White. I enjoy all things tech and joined this course to help update my coding skills. This group challenged ourselves to create a website that could be both educational and a resource.</p>
-  
-
-</div>
 
 ## The Dire Issue of Climate is Here and We *Need* Your Help!
 
