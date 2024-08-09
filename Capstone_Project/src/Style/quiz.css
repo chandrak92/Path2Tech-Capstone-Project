@@ -5,17 +5,20 @@
   background: linear-gradient(90.04deg, #9DBF9E 0.03%, #3A7D44 99.96%);
   color: #11052c;
   display: flex;
-  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0px 8px 10px #11052c54;
   margin: 0;
+  justify-content: center;
   padding: 0 30px;
 }
 
 .quiz-container {
   max-width: 500px;
   min-width: 250px;
+  height: auto;
   background: #ffffff;
-  border-radius: 4px;
-  margin-top: 100px;
+  border-radius: 6px;
+  margin: 50px 0px 50px;
   padding: 30px 60px;
 }
 
@@ -56,7 +59,7 @@
 }
 
 .quiz-container ul .selected-answer {
-  background: #ffd6ff;
+  background: #ffcf70;
   border: 1px solid #9DBF9E;
 }
 
@@ -84,17 +87,20 @@
 }
 
 .result h3 {
-  font-size: 24px;
+  font-size: 2rem;
   letter-spacing: 1.4px;
   text-align: center;
+  margin: 20px;
 }
 
 .result p {
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 500;
+  margin: 5px;
 }
 
 .result p span {
-  color: #9DBF9E;
-  font-size: 22px;
+  color: #533F1d;
+  font-size: 1.5rem;
+  margin: 3px;
 }

@@ -15,12 +15,12 @@ const SelectQuiz = () => {
     
     return(
         <section className="selection-container">
-            <h1>Test your Knowledge</h1>
+            <h1>Test Your Knowledge</h1>
             <section className="quizpage-container">
                 <section className="food-waste">
                 {activeSelection === null ? (
                         <section className="food-card" onClick={() => selectChoice("food")}>
-                        <h2>Food Waste</h2>
+                        <h2>Food < br/> Waste</h2>
                         </section>
                 ) : (
                     activeSelection === "food" && <Quiz activeSelection={activeSelection} onClickReturn={onClickReturn} />
@@ -31,7 +31,7 @@ const SelectQuiz = () => {
                 <section className="clothing-waste">
                     {activeSelection === null ? (
                         <section className="clothing-card" onClick={() => selectChoice("clothing")}>
-                        <h2>Clothing Waste</h2>
+                        <h2>Textile < br/> Waste</h2>
                     </section>
                     ) : (
                         activeSelection === "clothing" && <Quiz activeSelection={activeSelection} /> 

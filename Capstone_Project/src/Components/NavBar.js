@@ -6,7 +6,15 @@ import Authlog from './login';
 import '../Style/navbar.css'
 
 
-const NavBar = ({ isLoggedIn, userName, onLogin, onLogout, loginData, loginUser, setLoginData }) => {
+const NavBar = ({ 
+    isLoggedIn,
+    username,
+    onLogin,
+    onLogout,
+    loginData,
+    loginUser,
+    setLoginData
+}) => {
     const [abouthovered, setAboutHovered] = useState(false);
     const [resourcehovered, setResourceHovered] = useState(false);
     const [profilehovered, setProfileHovered] = useState(false);
@@ -74,7 +82,7 @@ const NavBar = ({ isLoggedIn, userName, onLogin, onLogout, loginData, loginUser,
                         onMouseEnter={() => setProfileHovered(true)}
                         onMouseLeave={() => setProfileHovered(false)}
                         >
-                            <NavLink to="/profile">{userName}</NavLink>
+                            <NavLink to="/profile">{username && username}</NavLink>
                             <div className={`dropdown-options ${profilehovered ? 'active-navbar' : 'hidden-navbar'}`}>
                              <button onClick={onLogout}>Logout</button>
                             </div>

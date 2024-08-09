@@ -1,0 +1,97 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+.register-container p {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.register-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height:auto;
+    background-color: #ffffff81;
+    text-align: center;
+    border: 3px solid #FFCF70;
+    padding: 5px 10px 5px 5px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    color: #332a1b;
+    font-size: 0.9em;
+}
+
+.register-card h3 {
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 0;
+}
+
+.register-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.register-card label {
+    color: #332a1b;
+}
+.register-card form table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    max-width: 100%;
+}
+.register-card .reg-email td,
+.register-card .reg-password td {
+    text-align: right;
+    font-weight: 600;
+}
+.register-card .reg-email input,
+.register-card .reg-password input {
+    width: 100%;
+    max-width: 100%;
+}
+.register-card .reg-email td {
+    padding-bottom: 10px;
+}
+.register-card .reg-password td {
+    padding-bottom: 10px;
+}
+
+.reg-profileimage input {
+    margin-left: 15px;
+}
+
+.register-card button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 10px 5px 0px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.signup-btn {
+    font-weight: bold;
+    background: #cc2020;
+    border-color: #ff8282 #960303 #960303 #ff8282;
+    color: white;
+}
