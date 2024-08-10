@@ -13,6 +13,15 @@
   max-width: 100%;
   margin: 0 auto;
 }
+
+.card h4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
 .card h4,
 .card p {
   margin: 0;
