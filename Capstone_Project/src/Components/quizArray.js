@@ -67,7 +67,7 @@ export const quiz = {
             question: 'How much money is lost annually as a result of clothing waste?',
             choices: ['$500 Billion', '$750 Million', '$3 Billion', '$100 Billion'],
             type: 'MCQs',
-            correctAnswer: '',
+            correctAnswer: '$500 Billion',
         },
         {
             question: 'What amount of returned clothes in the United States ends up in landfills? (mt= Metric Ton)',

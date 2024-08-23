@@ -34,7 +34,7 @@ const SelectQuiz = () => {
                         <h2>Textile < br/> Waste</h2>
                     </section>
                     ) : (
-                        activeSelection === "clothing" && <Quiz activeSelection={activeSelection} /> 
+                        activeSelection === "clothing" && <Quiz activeSelection={activeSelection} onClickReturn={onClickReturn}/> 
                     )}
                 </section>
             </section>
